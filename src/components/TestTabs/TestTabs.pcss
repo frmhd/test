@@ -1,0 +1,41 @@
+.test-tabs {
+  display: flex;
+
+  &__item {
+    flex-grow: 1;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-bottom: 4px solid transparent;
+    border-radius: none;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-bottom .25s;
+
+    &:hover {
+      border-bottom: 4px solid color(#000 lightness(80%));
+      transition: border-bottom .25s
+    }
+
+    &:active {
+      background-color: color(#fff blackness(1%));
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &_active {
+      border-bottom: 4px solid #000;
+    }
+
+    span {
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 module.exports = (ctx) => ({
-  plugins: {
-
-  }
+  plugins: [
+    require('precss')
+  ]
 })

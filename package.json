@@ -6,6 +6,8 @@
     "npm-run-all": "^4.0.2",
     "postcss": "^5.2.16",
     "postcss-cli": "^3.0.0",
+    "postcss-scss": "^0.4.1",
+    "precss": "^1.4.0",
     "react-scripts": "0.9.5",
     "standard": "^9.0.2"
   },
@@ -14,8 +16,8 @@
     "react-dom": "^15.4.2"
   },
   "scripts": {
-    "build-css": "postcss src/**/*.postcss -x css -r",
-    "watch-css": "npm run build-css && postcss src/**/*.postcss -x css -r -w",
+    "build-css": "postcss src/**/*.pcss -p postcss-scss -x css -r",
+    "watch-css": "npm run build-css && postcss src/**/*.pcss -p postcss-scss -x css -r -w",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",

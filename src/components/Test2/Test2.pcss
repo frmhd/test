@@ -1,0 +1,22 @@
+.block2 {
+  background-color: indianred;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1024px) {
+    background-color: darkcyan;
+  }
+
+  &__child {
+    position: relative;
+    flex-basis: calc(100%/3 - 15px);
+    text-align: left;
+    margin-bottom: calc(45px/2);
+    background-color: darkcyan;
+
+    @media screen and (max-width: 1024px) {
+      background-color: indianred;
+    }
+  }
+}

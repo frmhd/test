@@ -4,33 +4,21 @@ import TabsItem from '../TabsItem/TabsItem'
 import './TestTabs.css'
 
 const TestTabs = (props) => {
+
+  let tabsRow = []
+  for (var i = 1; i <= 5; i++) {
+    tabsRow.push(
+      <TabsItem
+        changeActiveTab={props.changeActiveTab}
+        activeTab={props.activeTab}
+        count={i}
+        key={i} />
+    )
+  }
+
   return (
     <div className="test-tabs">
-      <TabsItem
-        changeActiveTab={props.changeActiveTab}
-        activeTab={props.activeTab}
-        count='1' />
-      
-      <TabsItem
-        changeActiveTab={props.changeActiveTab}
-        activeTab={props.activeTab}
-        count='2' />
-
-      <TabsItem
-        changeActiveTab={props.changeActiveTab}
-        activeTab={props.activeTab}
-        count='3' />
-
-      <TabsItem
-        changeActiveTab={props.changeActiveTab}
-        activeTab={props.activeTab}
-        count='4' />
-
-      <TabsItem
-        changeActiveTab={props.changeActiveTab}
-        activeTab={props.activeTab}
-        count='5' />
-
+      {tabsRow}
     </div>
   )
 }

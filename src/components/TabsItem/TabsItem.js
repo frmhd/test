@@ -4,7 +4,7 @@ const TabsItem = (props) => {
 
   return (
     <button
-      className={props.activeTab === props.count ? "test-tabs__item test-tabs__item_active" : "test-tabs__item"} onClick={props.changeActiveTab}
+      className={props.activeTab === props.count ? "test-tabs__item test-tabs__item_active" : "test-tabs__item"} onClick={ () => {props.changeActiveTab(props.count)} }
     >
       <span>Тест </span>
       {props.count}

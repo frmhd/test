@@ -1,0 +1,110 @@
+$green: #49a254;
+
+.block1 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  counter-reset: counter;
+
+  &__child {
+    padding: 40px;
+    border-bottom: 1px solid $green;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -40px;
+      top: -1px;
+      width: 40px;
+      height: 100%;
+      border: 1px solid $green;
+      border-color: $green transparent $green $green;
+      border-radius: 40px 0 0 40px;
+      z-index: 1;
+    }
+
+    &:before {
+      counter-increment: counter;
+      content: counter(counter);
+      position: absolute;
+      top: calc(50%);
+      transform: translateY(-50%);
+      left: -50px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $green;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #f5d85f;
+      z-index: 2;
+    }
+
+    &:nth-child(2n) {
+
+      &:after {
+        right: -40px;
+        top: -1px;
+        left: auto;
+        border-color: $green $green $green transparent;
+        border-radius: 0 40px 40px 0;
+      }
+
+      &:before {
+        right: -50px;
+        left: auto;
+      }
+    }
+
+    &:first-child {
+
+      &:after {
+        height: 50%;
+        top: calc(50% - 1px);
+        border-color: transparent transparent $green $green;
+        border-radius: 0 0 0 40px;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+
+      &:after {
+        height: 50%;
+        border-color: $green $green transparent transparent;
+        border-radius: 0 40px 0 0;
+      }
+    }
+
+    &:nth-child(n) {
+
+      @media screen and (max-width: 1200px) {
+        border: none;
+
+        &:after {
+          border: none;
+          border-left: 1px solid $green;
+          border-radius: 0;
+          right: auto;
+          left: -40px;
+        }
+
+        &:before {
+          left: -50px;
+          right: auto;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+
+        &:after {
+          left: 20px;
+        }
+
+        &:before {
+          left: 10px;
+        }
+      }
+    }
+  }
+}

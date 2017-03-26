@@ -16,7 +16,7 @@ class Form extends Component {
 
   componentDidMount () {
     this.setState (
-      this.changeActiveTab (1)
+      { activeTest: 1 }
     )
   }
 

@@ -6,7 +6,7 @@ const Test5 = (props) => {
 
   let testClass = props.activeTab.toString() === props.count ? 'visible' : 'hidden'
 
-  // нагуглил, сам бы не смог
+  // нагуглил
   const Singleton = (function () {
     let instance
 

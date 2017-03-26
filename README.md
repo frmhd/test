@@ -1,11 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## install
-'npm i'
+`npm i`
 or
-'yarn'
+`yarn`
 
 ## start
-'npm start'
+`npm start`
 or
-'yarn start'
+`yarn start`

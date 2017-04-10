@@ -8,16 +8,16 @@ class Form extends Component {
   constructor (props) {
     super (props)
     this.state = {
-      activeTest: ''
+      activeTest: '1'
     }
 
     this.changeActiveTab = this.changeActiveTab.bind(this)
   }
 
   componentDidMount () {
-    this.setState (
-      { activeTest: 1 }
-    )
+    // this.setState (
+    //   { activeTest: 1 }
+    // )
   }
 
   changeActiveTab (tabCount) {

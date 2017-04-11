@@ -25,15 +25,46 @@
 .block2-float {
   background-color: indianred;
 
+  &:before,
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
   @media screen and (max-width: 1024px) {
     background-color: darkcyan;
   }
 
   &__child {
+    $thirdPart: 100% / 3;
+    width: calc($thirdPart - 15px);
+    float: left;
+    margin-bottom: calc(45px / 2);
+    text-align: left;
+    background-color: darkcyan;
+
+    &:not(:first-child) {
+      margin-left: calc(45px / 2);
+    }
+
+    &:nth-child(4n) {
+      margin-left: 0;
+    }
 
     @media screen and (max-width: 1024px) {
       background-color: indianred;
       float: right;
+
+      &:not(:first-child) {
+        margin-left: 0;
+        margin-right: calc(45px / 2);
+      }
+
+      &:nth-child(4n) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }

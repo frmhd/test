@@ -1,9 +1,28 @@
 .block3 {
-  display: flex;
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  &:after,
+  &:before {
+    clear: both;
+    content: '';
+    display: block;
+  }
 
   &__child {
-    flex-grow: 1;
+    float: left;
     padding: 20px;
     border: 2px solid #b9b9b9;
+
+    @for $i from 1 to 12 {
+
+      &:first-child:nth-last-child($i),
+      &:first-child:nth-last-child($i) ~ .block3__child {
+        width: calc(100% / $i);
+      }
+    }
   }
 }

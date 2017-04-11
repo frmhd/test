@@ -20,3 +20,30 @@
     }
   }
 }
+
+.value {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+
+  &:after {
+    position: absolute;
+  }
+}
+
+html:lang(en) {
+
+  .value:after {
+    content: '$';
+    left: -10px;
+  }
+}
+
+html:lang(ru) {
+
+  .value:after {
+    content: 'Р';
+    left: auto;
+    right: -14px;
+  }
+}
